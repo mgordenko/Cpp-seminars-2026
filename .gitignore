@@ -6,7 +6,8 @@
 *.lo
 *.o
 *.obj
-
+.DS_Store
+main.dSYM/Contents
 # Precompiled Headers
 *.gch
 *.pch
