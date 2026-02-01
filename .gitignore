@@ -1,53 +1,41 @@
+# Prerequisites
+*.d
 
-build/
-cmake-build-*/
-CMakeCache.txt
-CMakeFiles/
-CMakeScripts/
-Testing/
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-
-*.out
-*.exe
-*.app
-
+# Compiled Object files
+*.slo
+*.lo
 *.o
-*.a
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
 *.lib
-*.pdb
 
-*.gcda
-*.gcno
-*.gcov
+# Executables
+*.exe
+*.out
+*.app
 
-.idea/
-
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/c_cpp_properties.json
-
-*.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
-Debug/
-Release/
-x64/
-
-*.swp
-*.swo
-
-*~
-\#*\#
-
-.DS_Store
-
-*~
+# debug information files
+*.dwo
