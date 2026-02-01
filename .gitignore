@@ -40,3 +40,4 @@ main.dSYM/Contents
 
 # debug information files
 *.dwo
+*.dSYM
