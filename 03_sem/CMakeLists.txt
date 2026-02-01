@@ -1,0 +1,8 @@
+add_executable(task_03_01 01_task/main.cpp)
+add_executable(task_03_02 02_task/main.cpp)
+add_executable(task_03_03 03_task/main.cpp)
+add_executable(task_03_04 04_task/main.cpp)
+add_executable(task_03_05 05_task/main.cpp)
+add_executable(task_03_06 06_task/main.cpp)
+add_executable(task_03_07 07_task/main.cpp)
+add_executable(task_03_08 08_task/main.cpp)
