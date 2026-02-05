@@ -1,13 +1,15 @@
 #include <iostream>
-#include "array_utils.h"
+#include "include/array_utils.h"
 
 int main() {
-    int n = 3;
-    int arr[] = {1, 2, 3};
-    const int* const_arr = arr;
-    int* copy = copyArray(const_arr, n);
+    int n = 5;
+    int* arr = new int[] {1, 2, 3, 4, 5};
+    int* copy = copyArray(arr, n);
     for (int i = 0; i < n; ++i) {
-        std::cout << copy[i] << ' ';
+        std::cout << copy[i] << '\n';
     }
+    delete[] arr;
+    arr = nullptr;
     delete[] copy;
+    copy = nullptr;
 }

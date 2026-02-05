@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-    int array[3] = {1, 2, 3};
+    int n = 10;
+    int array[n];
     std::cout << (&array[2] - &array[0]) << '\n';
     std::cout << (&array[2] - &array[1]) << '\n';
 }

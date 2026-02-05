@@ -10,6 +10,17 @@ int* generate(int n) {
     return array;
 }
 
+void print_array2(int* array, int n) {
+    for (int i = 0; i < n; ++i) {
+        std::cout << array[i] << ' ';
+    }
+    array = new int[n];
+    for (int i = 0; i < n; ++i) {
+        array[i] = 100;
+    }
+    std::cout << '\n';
+    delete[] array;
+}
 void print_array1(int* array, int n) {
     for (int i = 0; i < n; ++i) {
         std::cout << array[i] << ' ';
@@ -17,10 +28,11 @@ void print_array1(int* array, int n) {
     }
     std::cout << '\n';
 }
-void print_array2(int* array, int n) {
+void print_array3(int*& array, int n) {
     for (int i = 0; i < n; ++i) {
         std::cout << array[i] << ' ';
     }
+    delete[] array;
     array = new int[n];
     for (int i = 0; i < n; ++i) {
         array[i] = 100;
@@ -32,11 +44,12 @@ int main() {
     int* array = generate(n);
     print_array1(array, n);
     print_array1(array, n);
-    delete[] array;
-    array = nullptr;
     array = generate(n);
     print_array2(array, n);
     print_array2(array, n);
+    array = generate(n);
+    print_array3(array, n);
+    print_array3(array, n);
     delete[] array;
     array = nullptr;
 }

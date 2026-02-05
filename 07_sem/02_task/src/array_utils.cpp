@@ -1,4 +1,4 @@
-#include "array_utils.h"
+#include "../include/array_utils.h"
 
 int* copyArray(const int* arr, int size) {
     int* copy = new int[size];
