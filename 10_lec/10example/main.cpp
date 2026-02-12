@@ -22,7 +22,7 @@ int main() {
     std::string vowels = "aeiuo";
     int count = 0;
     for (int i = 0; i < s.size(); ++i) {
-        if (vowels.find(s[i]) < vowels.size()) {
+        if (vowels.find(s[i]) != std::string::npos) {
             ++count;
         }
     }
