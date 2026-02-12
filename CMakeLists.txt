@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 4.0)
 project(cpp_sem_eda_compds_2026)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -14,3 +14,7 @@ add_subdirectory(07_lec)
 add_subdirectory(07_sem)
 add_subdirectory(08_lec)
 add_subdirectory(08_sem)
+add_subdirectory(09_lec)
+add_subdirectory(09_sem)
+add_subdirectory(09_lec_ead)
+add_subdirectory(10_lec)
