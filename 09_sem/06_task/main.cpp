@@ -1,17 +1,15 @@
 #include <fstream>
 #include <iostream>
 #include <random>
-void transpose(const int* const* src, int** &dest, int n) {
-    dest = new int *[n];
-    for (int i =0; i <n; ++i) {
+void transpose(const int* const* src, int** &dest, int n, int m) {
+    dest = new int *[m];
+    for (int i =0; i < m; ++i) {
         dest[i] = new int[n];
-        for (int j =0; j <n; ++j) {
+        for (int j =0; j < n; ++j) {
             dest[i][j] = src[j][i];
         }
     }
 }
-
-
 void fillRandom(int** matrix, int rows, int cols, int minVal = 0, int maxVal = 99) {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -41,19 +39,20 @@ void delete_matrix(int**& p, int n) {
     p = nullptr;
 }
 int main() {
-    int n = 4;
+    int n = 3, m = 5;
     int** matrix = new int*[n];
-    int** matrix2 = new int*[n];
+    int** matrix2;
 
     for (int i = 0; i < n; ++i) {
-        matrix[i] = new int[n];
+        matrix[i] = new int[m];
     }
-    fillRandom(matrix, n, n);
-    print(matrix, n, n);
+    fillRandom(matrix, n, m);
+    print(matrix, n, m);
 
-    transpose(matrix, matrix2, n);
-    print(matrix2, n, n);
+    transpose(matrix, matrix2, n, m);
+    print(matrix2, m, n);
     delete_matrix(matrix, n);
+    delete_matrix(matrix2, m);
 
     return 0;
 }

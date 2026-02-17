@@ -16,13 +16,12 @@ int** readMatrixFromFile(const std::string& filename, int& rows, int& cols) {
     in.close();
     return arr;
 }
-
 int main() {
     int rows, cols;
     int** arr = readMatrixFromFile("matrix.txt", rows, cols);
     for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; j++) {
-            std::cout << arr[i][j] << " ";
+        for (int j = 0; j < cols; ++j) {
+            std::cout << arr[i][j] << ' ';
         }
         std::cout << '\n';
     }
@@ -31,6 +30,5 @@ int main() {
     }
     delete[] arr;
     arr = nullptr;
-
     return 0;
 }

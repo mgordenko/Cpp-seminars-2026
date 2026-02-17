@@ -3,15 +3,11 @@
 #include <random>
 
 template<typename T>
-T maxElement(const T* const* matrix, int rows, int cols)
-{
+T maxElement(const T* const* matrix, int rows, int cols) {
     T max_elem = matrix[0][0];
-    for (int i = 0; i < rows; ++i)
-    {
-        for (int j = 0; j < cols; ++j)
-        {
-            if (matrix[i][j] > max_elem)
-            {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            if (matrix[i][j] > max_elem) {
                 max_elem = matrix[i][j];
             }
         }
@@ -39,14 +35,6 @@ void print(int** p, int n, int m) {
     }
 }
 
-void delete_matrix(int**& p, int n) {
-    for (int i = 0; i < n; ++i) {
-        delete[] p[i];
-        p[i] = nullptr;
-    }
-    delete[] p;
-    p = nullptr;
-}
 int main() {
     int n = 4;
     int** matrix = new int*[n];
@@ -55,7 +43,12 @@ int main() {
     }
     fillRandom(matrix, n, n);
     print(matrix, n, n);
-    std::cout << maxElement(matrix, n, n);
-    delete_matrix(matrix, n);
+    std::cout << maxElement<int>(matrix, n, n);
+    for (int i = 0; i < n; ++i) {
+        delete[] matrix[i];
+        matrix[i] = nullptr;
+    }
+    delete[] matrix;
+    matrix = nullptr;
     return 0;
 }
