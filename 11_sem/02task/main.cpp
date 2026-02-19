@@ -11,14 +11,12 @@ void readVector(std::vector<int>& v) {
         v.push_back(el);
     }
 }
-
 void printVector(const std::vector<int>& v) {
     for (int i = 0; i < v.size(); ++i) {
         std::cout << v[i] << ' ';
     }
     std::cout << '\n';
 }
-
 int main() {
     std::vector<int> v;
     readVector(v);

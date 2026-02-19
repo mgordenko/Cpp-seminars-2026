@@ -2,8 +2,8 @@
 #include <vector>
 
 template<typename T>
-T maxElement(const std::vector<T>& vector) {
-    return *std::max_element(vector.begin(), vector.end());
+T maxElement(const std::vector<T>& v) {
+    return *std::max_element(v.begin(), v.end());
 }
 
 int main() {
