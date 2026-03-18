@@ -1,0 +1,8 @@
+add_compile_options(-Wpedantic)
+add_executable(task_192_01 01example/main.cpp)
+add_executable(task_192_02 02example/main.cpp)
+add_executable(task_192_03 03example/main.cpp)
+add_executable(task_192_04 04example/main.cpp)
+add_executable(task_192_05 05example/main.cpp)
+add_executable(task_192_06 06example/main.cpp)
+add_executable(task_192_07 07example/main.cpp)

@@ -8,32 +8,24 @@
 struct Point {
     int x;
     int y;
-    inline static int count = 10;
-    double distance() {
-        return std::sqrt(x * x + y * y);
-    }
-    Point(int x, int y) { // this, self
+    Point() {}
+    Point(int x, int y) {
         this->x = x;
         this->y = y;
-        abracadabra = 0;
     }
-    void print() const { // this
+    Point(const Point& other) : x(other.x), y(other.y) { }
+    void print() const {
         std::cout << x << ' ' << y << '\n';
-        abracadabra++;
     }
-    void setA() const {
-        abracadabra = 100;
+    Point operator+(Point p2) {
+        return Point(x + p2.x, y + p2.y);
     }
-    void getAbracadabra() {
-        std::cout << abracadabra;
-    }
-    static void a() { // нет this нет объекта
-
-    }
-    mutable int abracadabra;
 };
 
 int main() {
-    const Point p(1, 2);
-    p.print();
+    Point p1(5, 4);
+    Point p2(3, 9);
+    Point p3 = p1 + p2;
+    Point p4 = p1.operator+(p2);
+    p3.print();
 }
